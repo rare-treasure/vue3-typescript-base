@@ -1,0 +1,66 @@
+@import '@/assets/scss/reset-css.scss';
+@import '@/assets/scss/element-plus.scss';
+
+.main {
+  display: flex;
+  width: 100%;
+}
+
+.bg {
+  background: $bgColor;
+}
+
+.small-bg {
+  background: $sBgColor;
+}
+
+.chart-tooltip {
+  background: rgba(1,10,49,0.8);
+  padding: vh(15px) vw(18px);
+  line-height: vh(42px);
+  box-shadow: 0 4px 7px 0 rgba(0,0,0,0.50);
+  font-size: vw(24px);
+  min-width: vw(300px);
+  position: absolute;
+
+  &__title {
+    color: #00C2EA;
+  }
+
+  &__label {
+    color: #98B1C1;
+  }
+
+  &__value {
+    color: #FFFFFF;
+  }
+}
+
+::-webkit-scrollbar {
+  width: vh(12px);
+  height: vw(12px);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+  width: 6px;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  opacity: 0.6;
+  background: #9DA3A7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.app-scroll-table-row:last-of-type {
+  .data-item { 
+    margin-bottom: 0; 
+  }
+}
