@@ -52,7 +52,4 @@ module.exports = {
       .loader('file-loader');
   },
   transpileDependencies: ['element-plus/src', 'element-plus/packages'],
-  devServer: {
-    historyApiFallback: true
-  }
 };

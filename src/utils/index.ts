@@ -1,3 +1,5 @@
+import { camelCase, upperFirst } from "lodash-es";
+import { App } from "vue";
 import { thousandthPercentile } from "./verification";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -13,4 +15,26 @@ export const computedPxTVh = (size: number) => {
 
 export const computedThousandthNum = (num: number | string) => {
   return (num + '').replace(thousandthPercentile, '$&,');
+}
+
+// 自动注册组件
+export function autoRegister(components: __WebpackModuleApi.RequireContext, app: App) {
+  components.keys().forEach((fileName) => {
+    const config = components(fileName);
+
+    console.log(fileName)
+
+    try {
+      const componentName = upperFirst(camelCase(config.default.name));
+
+
+      if (componentName) {
+        app.component(componentName, config.default || config);
+      } else {
+        app.component(config.default || config);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  });
 }

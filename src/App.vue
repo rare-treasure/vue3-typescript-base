@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <svg-icon :size="26"></svg-icon>
+    <svg-icon :size="26" icon="logo"></svg-icon>
     <router-view></router-view>
   </div>
 </template>

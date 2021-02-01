@@ -1,6 +1,6 @@
 {
-  "name": "epidemic-sys-web",
-  "version": "0.1.0",
+  "name": "vue3-typescript-base",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

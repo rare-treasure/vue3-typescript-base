@@ -13,6 +13,13 @@ export default defineComponent({
   name: 'Home',
   setup() {
     return setupConfig
+  },
+  mounted() {
+    this.$loading('hide')
+
+    setTimeout(() => {
+      this.$loading('hide');
+    }, 1000)
   }
 });
 </script>
